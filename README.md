@@ -13,7 +13,8 @@ JavaScript — Logic & localStorage
  -Data persists using localStorage
  -Responsive design
 
-# Getting Started
+# Live Demo
+Your site is live at https://priti-mukhi0609.github.io/frontend-projects-showcase/
 
 # Prerequisites
 Just a browser — no installation needed!
