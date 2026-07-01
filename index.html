@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App | Priti Mukhi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">⏾</button>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>My Notes</h1>
+    <p>Your thoughts, saved!</p>
+  </div>
+  <span class="note-count" id="noteCount">0 notes</span>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input type="text" class="search-input" id="searchInput" placeholder="Search notes..." oninput="renderNotes()" />
+</div>
+
+<!-- ADD / EDIT NOTE FORM -->
+<div class="add-form" id="addForm">
+  <p class="form-eyebrow" id="formEyebrow">New Note</p>
+  <input type="text" class="title-input" id="noteTitle" placeholder="Title..." maxlength="60" />
+  <div class="form-divider"></div>
+  <textarea class="body-input" id="noteBody" placeholder="Write something..." maxlength="500" oninput="updateCharCount()"></textarea>
+  <div class="form-divider"></div>
+  <div class="form-footer">
+    <span class="char-count" id="charCount" style="display:none";>500 characters left</span>
+    <div style="display:flex; gap:8px;">
+      <button class="btn-add" id="cancelEditBtn" onclick="cancelEdit()" style="display:none; background:transparent; color:var(--text-2); border:1px solid var(--border-md);">Cancel</button>
+      <button class="btn-add" id="saveBtn" onclick="addNote()">+ Add Note</button>
+    </div>
+  </div>
+</div>
+
+<!-- NOTES GRID -->
+<div class="notes-grid" id="notesGrid"></div>
+<div class="empty-state" id="emptyState">
+  
+  <h3>No notes yet</h3>
+  <p>Write your first note above!</p>
+</div>
+
+<footer>Built by Priti Mukhi · HTML CSS JS · localStorage</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
